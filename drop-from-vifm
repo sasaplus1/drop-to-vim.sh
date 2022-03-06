@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# set -x
+
+set -euo pipefail
+
+__main() {
+  if [[ "$1" =~ ^-c ]]
+  then
+    "$EDITOR" "$@"
+  else
+    "$(cd "$(dirname "$0")" && pwd)/drop-to-vim" "$@"
+  fi
+}
+__main "$@"
