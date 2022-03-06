@@ -5,7 +5,7 @@
 set -euo pipefail
 
 __main() {
-  for i in $(seq $#)
+  for _ in $(seq $#)
   do
     printf -- '%b["drop","%s"]%b' '\x1b]51;' "$PWD/$1" '\x07' &
     shift
