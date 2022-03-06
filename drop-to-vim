@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# set -x
+
+set -euo pipefail
+
+__main() {
+  for i in $(seq $#)
+  do
+    printf -- '%b["drop","%s"]%b' '\x1b]51;' "$PWD/$1" '\x07' &
+    shift
+  done
+}
+__main "$@"
