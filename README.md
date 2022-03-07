@@ -22,6 +22,10 @@ if $VIM_TERMINAL
 endif
 ```
 
+## Ref
+
+- [:terminal に関する小さい Tips](https://qiita.com/mattn/items/e99e5dc7c4054ba25e7d)
+
 ## License
 
 The MIT license.
